@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mensajes</title>
+</head>
+<body>
+    <h1>Mensajes</h1>
+    <ul>
+        {% for message in messages %}
+        <li>
+            {{ message }}
+            <form action="{{ url_for('delete_message', index=loop.index0) }}" method="post" style="display:inline;">
+                <button type="submit">Eliminar</button>
+            </form>
+            <form action="{{ url_for('update_message', index=loop.index0) }}" method="post" style="display:inline;">
+                <input type="text" name="updated_message" placeholder="Nuevo mensaje" required>
+                <button type="submit">Actualizar</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Agregar Mensaje</h2>
+    <form action="{{ url_for('add_message') }}" method="post">
+        <input type="text" name="message" required>
+        <button type="submit">Agregar</button>
+    </form>
+</body>
+</html>

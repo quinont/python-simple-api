@@ -1,0 +1,24 @@
+# Ignorar la carpeta de pruebas
+tests/
+
+# Ignorar el Dockerfile
+Dockerfile
+
+# Ignorar el Makefile
+makefile
+
+# Ignorar el archivo de configuraci?n de cobertura
+.coveragerc
+
+# Ignorar archivos y carpetas comunes que no son necesarios en la imagen
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+*.venv
+.env
+.venv
+.idea/
+.vscode/
+*.swp
