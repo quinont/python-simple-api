@@ -5,6 +5,9 @@ test:
 install:
 	pip3 install -r requirements.txt
 
+build:
+	@echo '************ NO ES NECESARIO ************'
+
 linting:
 	flake8 --max-line-length 100
 
