@@ -3,7 +3,7 @@ test:
 	python3 -m pytest --cov . -p no:warnings
 
 install:
-	pip3 install -r requirements.txt
+	pip3 install -r requirements.txt --break-system-packages
 
 build:
 	@echo '************ NO ES NECESARIO ************'
